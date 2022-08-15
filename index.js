@@ -1,5 +1,5 @@
-let URL = 'http://localhost:8080/';
-//var URL = 'https://middleware.blockchain.julasoft.com/';
+//let URL = 'http://localhost:8080/';
+var URL = 'https://middleware.blockchain.julasoft.com/';
 
 var HEADERS = new Headers();
 HEADERS.append('Content-Type', 'application/json');
@@ -100,14 +100,31 @@ try {
             "state": "ok",
             "valid": "true",
             "contract" : {
-               "contract_id": contract_id,
-               "final_insured": final_insured,
-               "valid_since": valid_since,
-               "valid_until": valid_until,
-               "user_acepts": user_acepts,
-               "acceptance_date": acceptance_date,
+              "contract_id": contract_id,
+              "final_insured": final_insured,
+              "valid_since": valid_since,
+              "valid_until": valid_until,
+              "user_accepts": user_accepts,
+              "acceptance_date": acceptance_date, 
+            "policy": {
+                "policy_id": policy_id,
+                "policy_number":policy_number,
+                "policity_type":policity_type,
+                "valid_since":valid_since,
+                "final_insured":final_insured, 
+                "source":source,
+                "destiny":destiny, 
+                "condition":condition,
+                "conveyance":conveyance,
+                "container_type":container_type,
+                "merchandise": merchandise,
+                "insured_amount": insured_amount,
+                "currency": currency,
+                "reference_document":reference_document,
+                
             }
-           };
+            }
+          };
 
 
     console.log(body)
