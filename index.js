@@ -1,5 +1,5 @@
 //let URL = 'https://middleware.blockchain.julasoft.com/';
-var URL = 'http://172.17.0.2:8080';
+var URL = 'https://middleware.blockchain.julasoft.com/';
 var HEADERS = new Headers();
 HEADERS.append('Content-Type', 'application/json');
 HEADERS.append('Accept', 'application/json');
@@ -89,10 +89,12 @@ try {
 
     //{"id":"87654321","lat":-34.61315,"lon":-58.37723,"state":"ok","valid":true}'
     contract_id = document.getElementById('contract_id').value;;
-    valid_since = document.getElementById('valid_since').value;
     final_insured = document.getElementById('final_insured').value;
-    acceptance_date = document.getElementById('acceptance_date').value;
+    valid_since = document.getElementById('valid_since').value;
+    valid_until = document.getElementById('valid_since').value;
     user_acepts = document.getElementById('user_acepts').value;
+    acceptance_date = document.getElementById('acceptance_date').value;
+
   
     body = {"id":contract_id,
            "lat":'-34.61315',
@@ -100,11 +102,13 @@ try {
            "state":"ok",
            "valid":'true',
            'contract' : {
-            'contract_id' : contract_id,
-            'valid_since' : valid_since,
+            'contract_id': contract_id,
             'final_insured': final_insured,
-            'acceptance_date':acceptance_date,
+            'valid_since': valid_since,
+            'valid:until': valid_until,
             'user_acepts':user_acepts,
+            'acceptance_date': acceptance_date,
+            
            }
            };
 
@@ -140,5 +144,5 @@ try {
   }
 };
 
-blockchain_status();
+//blockchain_status();
 //read_data()

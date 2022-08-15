@@ -15,10 +15,11 @@
             <li><a href="polizas.html">Polizas</a></li>
             <li><a href="endosos.html">Endosos</a></li>
             <li><a href="siniestros.html">Siniestros</a></li>
+            <li><a href="consultas.html">Consultas</a></li>
           <ul> 
         </nav>
       </header>
-      <h1>Sitio de pruebas - Ingreso de datos a Blockchain</h1>
+      <h2>Mockup Middleware Blockchain</h2>
       </p>
       <img src="../img/logo.png"height="90px" width="300px">
       <p>
@@ -32,29 +33,51 @@
 
     </center>    
         
-        <h3> Carga de contratos y polizas </h3>
+    <h3>Polizas</h3> <br>
+    <form id="formulario">
+        <label for="id">ID de contrato: </label>
+        <input type="text" id="contract" required>
+        <br> <br>
+        <label for="id">Número de contrato: </label>
+        <input type="text" id="contract_id" required >
+        <br> <br>
+        <label for="id">Asegurado: </label>
+        <input type="text" id="final_insured" required> 
+        <br> <br>
+        <label for="id">Vigencia desde: </label>
+        <input type="text" id="valid_since" required>
+        <br> <br>
+        <label for="id">Vigencia hasta: </label>
+        <input type="text" id="valid_until" required>
+        <br> <br>
+        <label for="id">Usuario de aceptacion: </label>
+        <input type="text" id="user_acepts" required>
+        <br> <br>
+        <label for="id">Fecha de aceptacion: </label>
+        <input type="text" id="acceptance_date" required>
+        <br> <br>
+        <button class="btn btn-primary" onclick='save_contract(event)' type="submit">Enviar</button>
+        
 
-      <form method="post">
-        <h4> ID de contrato </h4>
-          <input type="text" name="contrato" required>
-          <br>    
-          <h4> Numero de poliza </h4>  
-          <input type="text" name="poliza" required>
-          <br>
-          <h4> Numero de endoso</h4>
-          <input type="text" name="endoso"required>
-          <br>
-          <input type="submit">   
-        </form>  
+
+      </form>
+      <div class="mt-3" id="container-respuesta">
+        <label id="respuesta"></label>
+      </div>
+  </div>
+
+      <br>
       
-        <br><br><br><br><br><br>
+    
+      
+      <footer>
+        <h6>Todos los derechos reservados. Julasoft S.A</h6>
+          <h6>Maqueta para testing blockchain</h6>
+          <a href="https://www.julasoft.com">Sitio web Julasoft</a>    
         
-        
-        <footer>
-          <h4>Todos los derechos reservados. Julasoft S.A</h4>
-            <h5>Maqueta para testing blockchain</h5>
-            <a href="https://www.julasoft.com">Sitio web</a>    
-          
-      </footer>  
+    </footer>  
+    <!-- <script src="app1.js"></script> -->
+    <script src="../index.js" ></script>
+
   </body>
-  </html>
+</html>
