@@ -77,11 +77,79 @@ try {
   }
 };
 
-
 const save_contract = async(event) => {
+//    body: JSON.stringify({
+//         title: 'foo',
+//         body: 'bar',
+//         userId: 1,
+//     }),
 try {
     event.preventDefault();
     console.log('save_contract');
+    var respuesta = document.getElementById('respuesta');
+    respuesta.innerHTML = 'Consultando . '
+
+    //{"id":"87654321","lat":-34.61315,"lon":-58.37723,"state":"ok","valid":true}'
+    contract_contract_id = document.getElementById('contract_contract_id').value;
+    contract_final_insured = document.getElementById('contract_final_insured').value;
+    contract_valid_since = document.getElementById('contract_valid_since').value;
+    contract_valid_until = document.getElementById('contract_valid_until').value;
+    contract_user_accepts = document.getElementById('contract_user_accepts').value;
+    contract_acceptance_date = document.getElementById('contract_acceptance_date').value;
+
+  
+    body = {"id"  : contract_contract_id,
+            "lat" : "0",
+            "lon" : "0",
+            "state": "ok",
+            "valid": "true",
+            "contract" : {
+              "contract_id": contract_contract_id,
+              "final_insured": contract_final_insured,
+              "valid_since": contract_valid_since,
+              "valid_until": contract_valid_until,
+              "user_accepts": contract_user_accepts,
+              "acceptance_date": contract_acceptance_date, 
+            
+           }
+           };
+
+
+    console.log(body)
+    
+
+    const result = await fetch(URL + '/data/save', {
+    method: 'POST',
+    headers: HEADERS,
+    body: JSON.stringify(body)
+    });
+
+    console.log(result);
+    if (result.status === 200) {
+        const datos = await result.text();
+        console.log(datos)
+        respuesta.innerHTML = datos
+    } else if(result.status === 503){
+        console.log('Error de autenticación');
+        respuesta.innerHTML = 'Error de autenticación'
+    } else if(result.status === 400){
+        console.log('Dato no encontrado');
+        respuesta.innerHTML = 'Dato no encontrado'
+    } else {
+        console.log('Hubo un error desconocido');
+        respuesta.innerHTML = 'Hubo un error desconocido'    
+    }
+
+  } catch(error){
+    console.log(error);
+    respuesta.innerHTML = 'Error interno: ' + error
+  }
+};
+
+const save_contract_and_policy = async(event) => {
+try {
+    event.preventDefault();
+    console.log('save_contract_and_policy');
     var respuesta = document.getElementById('respuesta');
     respuesta.className = 'text-danger';
     respuesta.innerHTML = 'Enviando ... '
@@ -180,7 +248,7 @@ try {
 const save_policy = async(event) => {
   try {
       event.preventDefault();
-      console.log('save_contract');
+      console.log('save_policy');
       var respuesta = document.getElementById('respuesta');
       respuesta.className = 'text-danger';
       respuesta.innerHTML = 'Enviando ... '
@@ -272,7 +340,7 @@ const save_policy = async(event) => {
   const save_claims = async(event) => {
     try {
         event.preventDefault();
-        console.log('save_contract');
+        console.log('save_claims');
         var respuesta = document.getElementById('respuesta');
         respuesta.className = 'text-danger';
         respuesta.innerHTML = 'Enviando ... '
