@@ -16,16 +16,17 @@
   <div id="app"></div>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="/source/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 
     <header>
         <nav class="nav">
           <ul > 
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="source/polizas.html">Polizas</a></li> 
-            <li><a href="source/endosos.html">Endosos</a></li>
-            <li><a href="source/siniestros.html">Siniestros</a></li>
-            <li><a href="source/consultas.html">Consultas</a></li>
+            <li><a href="src/contratos_y_polizas.html">Contratos y Polizas</a></li>
+            <li><a href="src/polizas.html">Polizas</a></li> 
+            <li><a href="src/endosos.html">Endosos</a></li>
+            <li><a href="src/siniestros.html">Siniestros</a></li>
+            <li><a href="src/consultas.html">Consultas</a></li>
           <ul> 
         </nav>
       </header>
@@ -67,55 +68,6 @@
           <label for="contract_acceptance_date">Fecha de aceptacion: </label>
           <input type="date" id="contract_acceptance_date" required>
           <br> <br>
-
-          <h3>Polizas</h3>
-
-        <br>
-        <label for="policy_policy_number">Numero de poliza: </label>
-        <input type="text" id="policy_policy_number" required >
-        <br> <br> 
-        <label for="policy_policy_type">Tipo de poliza: </label>
-        <input type="text" id="policy_policy_type" required> 
-        <br> <br>
-        <label for="policy_valid_since">Vigencia desde: </label>
-        <input type="date" id="policy_valid_since" required>
-        <br> <br>
-        <label for="policy_valid_until">Vigencia hasta: </label>
-        <input type="date" id="policy_valid_until" required>
-        <br> <br>
-        <label for="policy_final_insured">Nombre del asegurado final: </label>
-        <input type="text" id="policy_final_insured" required>
-        <br> <br>
-        <label for="policy_source">Origen: </label>
-        <input type="text" id="policy_source" required>
-        <br> <br>
-        <label for="policy_destiny">Destino: </label>
-        <input type="text" id="policy_destiny" required>
-        <br>
-        <br>
-        <label for='policy_condition'>Condicion</label>
-          <select id='policy_condition'>
-          <option>Nueva</option>
-          </select>
-        <br> <br>
-        <label for="policy_conveyance">Transporte: </label>
-        <input type="text" id="policy_conveyance" required>
-        <br><br>
-        <label for="policy_container_type">Tipo de container: </label>
-        <input type="text" id="policy_container_type" required>
-        <br><br>
-        <label for="policy_merchandise">Mercaderia a transportar: </label>
-        <input type="text" id="policy_merchandise" required>
-        <br><br>
-        <label for="policy_insured_amount">Monto asegurado: </label>
-        <input type="text" id="policy_insured_amount" required>
-        <br><br>
-        <label for="policy_currency">Moneda: </label>
-        <input type="text" id="policy_currency" required>
-        <br><br>
-        <label for="policy_reference_document">Documento de referencia: </label>
-        <input type="text" id="policy_reference_document" required>
-        <br><br>
         <button class="btn btn-primary" onclick='save_contract(event)' type="submit">Enviar</button>
           
 
@@ -136,7 +88,7 @@
         
     </footer>  
     <!-- <script src="app1.js"></script> -->
-    <script src="index.js" ></script>
+    <script src="/js/app.js" ></script>
 
   </body>
 </html>
