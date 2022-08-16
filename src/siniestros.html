@@ -32,14 +32,17 @@
 
     <h3>Siniestros</h3> <br>
     <form id="formulario">
-        <label for="contract_contract_id">ID de contrato: </label>
+        <label for="claims_contract_id">ID de contrato: </label>
         <input type="text" id="claims_contract_id" required>
         <br> <br>
-        <label for="claims_policy_id">Numero de poliza: </label>
-        <input type="text" id="claims_policy_id" required>
+        <label for="claims_policy_number">Numero de poliza: </label>
+        <input type="text" id="claims_policy_number" required>
         <br> <br>
         <label for="claims_date_complaint">Fecha de reclamo: </label>
-        <input type="text" id="claims_date_complaint" required >
+        <input type="date" id="claims_date_complaint" required >
+        <br> <br>
+        <label for="claims_date_claim">Fecha del siniestro: </label>
+        <input type="date" id="claims_date_claim" required >
         <br> <br>
         <label for="claims_type_claim">Tipo de siniestro: </label>
         <input type="text" id="claims_type_claim" required> 
@@ -56,7 +59,7 @@
         <label for="claims_claimed_status">Estado del reclamo: </label>
         <input type="text" id="claims_claimed_status" required>
         <br> <br>
-        <button class="btn btn-primary" onclick='save_contract(event)' type="submit">Enviar</button>
+        <button class="btn btn-primary" onclick='save_claims(event)' type="submit">Enviar</button>
         
 
 

@@ -177,3 +177,177 @@ try {
   }
 };
 
+const save_policy = async(event) => {
+  try {
+      event.preventDefault();
+      console.log('save_contract');
+      var respuesta = document.getElementById('respuesta');
+      respuesta.className = 'text-danger';
+      respuesta.innerHTML = 'Enviando ... '
+  
+      // Contratos
+      policy_contract_id = document.getElementById('policy_contract_id').value;
+    
+      // Polizas
+      policy_policy_number = document.getElementById('policy_policy_number').value;
+      policy_policy_type = document.getElementById('policy_policy_type').value;
+      policy_valid_since = document.getElementById('policy_valid_since').value;
+      policy_final_insured = document.getElementById('policy_final_insured').value;
+      policy_source = document.getElementById('policy_source').value;
+      policy_destiny = document.getElementById('policy_destiny').value;
+      policy_condition = document.getElementById('policy_condition').value;
+      policy_conveyance = document.getElementById('policy_conveyance').value;
+      policy_container_type = document.getElementById('policy_container_type').value;
+      policy_merchandise = document.getElementById('policy_merchandise').value;
+      policy_insured_amount = document.getElementById('policy_insured_amount').value;
+      policy_currency = document.getElementById('policy_currency').value;
+      policy_reference_document = document.getElementById('policy_reference_document').value;
+  
+  
+  
+    
+      body = {"id"  : policy_contract_id,
+              "lat" : "0",
+              "lon" : "0",
+              "state": "ok",
+              "valid": "true",
+              "contract" : {
+                "contract_id": policy_contract_id,
+                
+              "policy": {
+                  "policy_id": policy_policy_number,
+                  "policy_number":policy_policy_number,
+                  "policity_type":policy_policy_type,
+                  "valid_since":policy_valid_since,
+                  "final_insured":policy_final_insured, 
+                  "source":policy_source,
+                  "destiny":policy_destiny, 
+                  "condition":policy_condition,
+                  "conveyance":policy_conveyance,
+                  "container_type":policy_container_type,
+                  "merchandise": policy_merchandise,
+                  "insured_amount": policy_insured_amount,
+                  "currency": policy_currency,
+                  "reference_document":policy_reference_document,
+                  
+              }
+              }
+            };
+  
+  
+      console.log(body)
+      
+  
+      const result = await fetch(URL + '/data/save', {
+          method: 'POST',
+          headers: HEADERS,
+          body: JSON.stringify(body)
+      });
+      
+  
+      console.log(result);
+      if (result.status === 200) {
+          const datos = await result.text();
+          console.log(datos)
+          respuesta.className = 'text-success';
+          respuesta.innerHTML = datos
+      } else if(result.status === 503){
+          console.log('Error de autenticación.');
+          respuesta.innerHTML = 'Error de autenticación.'
+      } else if(result.status === 400){
+          console.log('Este contrato ya se encuentra registrado.');
+          respuesta.innerHTML = 'Este contrato ya se encuentra registrado.'
+      } else {
+          console.log('Hubo un error desconocido.');
+          respuesta.innerHTML = 'Hubo un error desconocido.'    
+      }
+  
+    } catch(error){
+      console.log(error);
+      respuesta.innerHTML = 'El server Middleware BlockChain no responde. [' + error + ']';
+    }
+  };
+  
+
+  const save_claims = async(event) => {
+    try {
+        event.preventDefault();
+        console.log('save_contract');
+        var respuesta = document.getElementById('respuesta');
+        respuesta.className = 'text-danger';
+        respuesta.innerHTML = 'Enviando ... '
+    
+        // Contratos
+        claims_contract_id = document.getElementById('claims_contract_id').value;
+      
+        // Polizas
+        claims_policy_number = document.getElementById('claims_policy_number').value;
+
+        // Siniestros
+        claims_date_complaint = document.getElementById('claims_date_complaint').value;
+        claims_date_claim = document.getElementById('claims_date_claim').value;
+        claims_type_claim = document.getElementById('claims_type_claim').value;
+        claims_crash_site = document.getElementById('claims_crash_site').value;
+        claims_reclaimed_amount = document.getElementById('claims_reclaimed_amount').value;
+        claims_currency = document.getElementById('claims_currency').value;
+        claims_claimed_status = document.getElementById('claims_claimed_status').value;
+  
+        body = {"id"  : claims_contract_id,
+                "lat" : "0",
+                "lon" : "0",
+                "state": "ok",
+                "valid": "true",
+                "contract" : {
+                  "contract_id": claims_contract_id,
+                  
+                "policy": {
+                    "policy_id": claims_policy_number,
+                  
+                "claims":{
+                    "date_complaint": claims_date_complaint,                   
+                    "date_claim": claims_date_claim,
+                    "type_claim": claims_type_claim,
+                    "crash_site": claims_crash_site, 
+                    "reclaimed_amount": claims_reclaimed_amount,
+                    "currency": claims_currency,
+                    "claimed_status": claims_claimed_status,            
+                                      
+                } 
+                  
+                }
+                }
+              };
+    
+    
+        console.log(body)
+        
+    
+        const result = await fetch(URL + '/data/save', {
+            method: 'POST',
+            headers: HEADERS,
+            body: JSON.stringify(body)
+        });
+        
+    
+        console.log(result);
+        if (result.status === 200) {
+            const datos = await result.text();
+            console.log(datos)
+            respuesta.className = 'text-success';
+            respuesta.innerHTML = datos
+        } else if(result.status === 503){
+            console.log('Error de autenticación.');
+            respuesta.innerHTML = 'Error de autenticación.'
+        } else if(result.status === 400){
+            console.log('Este contrato ya se encuentra registrado.');
+            respuesta.innerHTML = 'Este contrato ya se encuentra registrado.'
+        } else {
+            console.log('Hubo un error desconocido.');
+            respuesta.innerHTML = 'Hubo un error desconocido.'    
+        }
+    
+      } catch(error){
+        console.log(error);
+        respuesta.innerHTML = 'El server Middleware BlockChain no responde. [' + error + ']';
+        }
+  };
