@@ -35,7 +35,7 @@ const blockchain_status = async() => {
 
   } catch(error){
     console.log(error);
-    respuesta.innerHTML = 'Error interno: ' + error
+    respuesta.innerHTML = 'El server Middleware BlockChain no responde. [' + error + ']';
   }
 };
 
@@ -73,7 +73,7 @@ try {
 
   } catch(error){
     console.log(error);
-    respuesta.innerHTML = 'Error interno: ' + error
+    respuesta.innerHTML = 'El server Middleware BlockChain no responde. [' + error + ']';
   }
 };
 
@@ -155,7 +155,7 @@ try {
 
   } catch(error){
     console.log(error);
-    respuesta.innerHTML = 'Error interno: ' + error
+    respuesta.innerHTML = 'El server Middleware BlockChain no responde. [' + error + ']';
   }
 };
 
