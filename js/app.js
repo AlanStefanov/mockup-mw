@@ -90,7 +90,7 @@ try {
     contract_contract_id = document.getElementById('contract_contract_id').value;
     contract_final_insured = document.getElementById('contract_final_insured').value;
     contract_valid_since = document.getElementById('contract_valid_since').value;
-    contract_valid_until = document.getElementById('contract_valid_since').value;
+    contract_valid_until = document.getElementById('contract_valid_until').value;
     contract_user_accepts = document.getElementById('contract_user_accepts').value;
     contract_acceptance_date = document.getElementById('contract_acceptance_date').value;
     // Polizas
