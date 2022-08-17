@@ -35,7 +35,7 @@ function cambioSiniestro(str) {
   s_contract = document.getElementById('claims_contract_number').value;
   s_policy = document.getElementById('claims_policy_number').value;
   s_claim = document.getElementById('claims_claim_number').value;
-  elem.value = "C" + s_contract + "P" + s_policy + "E" + s_claim;
+  elem.value = "C" + s_contract + "P" + s_policy + "S" + s_claim;
   
 
 }
