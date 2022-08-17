@@ -12,11 +12,11 @@
         <nav>
         <ul> 
           <li><a href="../index.html">Contratos</a></li>
-          <li><a href="polizas.html">Polizas</a></li>
+          <li><a href="polizas.html">Pólizas</a></li>
           <li><a href="endosos.html">Endosos</a></li>
           <li><a href="siniestros.html">Siniestros</a></li>
           <li><a href="consultas.html">Consultas</a></li>
-          <li><a href="contratos_y_polizas.html">Contratos y Polizas</a></li>
+          <li><a href="contratos_y_polizas.html">Contratos y Pólizas</a></li>
           <ul> 
         </nav>
       </header>
@@ -32,27 +32,36 @@
 
     <h3>Siniestros</h3> <br>
     <form id="formulario">
-        <label for="claims_contract_id">ID de contrato: </label>
-        <input type="text" id="claims_contract_id" required>
+        <label for="claims_claims_id">ID Siniestro: </label>
+        <input type="text" id="claims_claims_id" disabled>
         <br> <br>
-        <label for="claims_policy_number">Numero de poliza: </label>
-        <input type="text" id="claims_policy_number" required>
+        <label for="claims_contract_number"> Número de contrato: </label>
+        <input type="text" id="claims_contract_number" required oninput="cambioSiniestro()">
+        
+        <label for="claims_policy_number">Número de póliza: </label>
+        <input type="text" id="claims_policy_number" required oninput="cambioSiniestro()">
         <br> <br>
+        <label for="claims_claim_number">Número de siniestro:</label>
+        <input type="text" id="claims_claim_number"required oninput="cambioSiniestro()">
+        <br><br>
         <label for="claims_date_complaint">Fecha de reclamo: </label>
-        <input type="date" id="claims_date_complaint" required >
+        <input style="width: 215px;" type="date" id="claims_date_complaint" required >
         <br> <br>
         <label for="claims_date_claim">Fecha del siniestro: </label>
-        <input type="date" id="claims_date_claim" required >
+        <input style="width: 215px;"  type="date" id="claims_date_claim" required >
         <br> <br>
         <label for="claims_type_claim">Tipo de siniestro: </label>
         <input type="text" id="claims_type_claim" required> 
         <br> <br>
         <label for="claims_crash_site">Lugar del siniestro: </label>
         <input type="text" id="claims_crash_site" required>
+
+        <label for="claims_crash_site_hour">Horario del siniestro: </label>
+        <input type="text" id="claims_crash_hour" required>
         <br> <br>
         <label for="claims_reclaimed_amount">Monto reclamado: </label>
         <input type="text" id="claims_reclaimed_amount" required>
-        <br> <br>
+        
         <label for="claims_currency">Moneda: </label>
         <input type="text" id="claims_currency" required>
         <br> <br>
@@ -78,8 +87,12 @@
           <a href="https://www.julasoft.com">Sitio web Julasoft</a>    
         
     </footer>   
-    <!-- <script src="app1.js"></script> -->
+
+
+
+<!-- JS -->
     <script src="../js/app.js" ></script>
+    <script src="../js/misc.js" ></script>
 
   </body>
 </html>

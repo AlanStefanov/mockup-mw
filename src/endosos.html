@@ -14,11 +14,11 @@
         <nav>
         <ul> 
             <li><a href="../index.html">Contratos</a></li>
-            <li><a href="polizas.html">Polizas</a></li>
+            <li><a href="polizas.html">Pólizas</a></li>
             <li><a href="endosos.html">Endosos</a></li>
             <li><a href="siniestros.html">Siniestros</a></li>
             <li><a href="consultas.html">Consultas</a></li>
-            <li><a href="contratos_y_polizas.html">Contratos y Polizas</a></li>
+            <li><a href="contratos_y_polizas.html">Contratos y Pólizas</a></li>
           <ul> 
         </nav>
       </header>
@@ -38,57 +38,72 @@
         <h3>Endosos</h3> <br>
         <form id="formulario">
           
-          <label for="policy_contract_id">ID de contrato: </label>
-          <input type="text" id="policy_contract_id" required >
+          <label for="endorsement_endorsement_id">ID endoso: </label>
+          <input type="text" id="endorsement_endorsement_id" disabled >
+          <br><br><br>
+          <label for="policy_contract_number">Número de contrato: </label>
+          <input type="text" id="policy_contract_number" required oninput="cambioEndoso()">
+
+          <label for="policy_policy_number">Número de póliza: </label>
+          <input type="text" id="policy_policy_number" required oninput="cambioEndoso()">
+          
+          <label for="policy_endorsement_number">Número de endoso:</label>
+          <input type="text" id="policy_endorsement_number" required oninput="cambioEndoso()">
           <br><br>
-          <label for="policy_policy_number">Numero de poliza: </label>
-          <input type="text" id="policy_policy_number" required >
-          <br> <br> 
-          <label for="policy_policy_type">Tipo de poliza: </label>
+          <label for="policy_policy_type">Tipo de póliza: </label>
           <input type="text" id="policy_policy_type" required> 
-          <br> <br>
+          <br><br>
           <label for="policy_valid_since">Vigencia desde: </label>
-          <input type="date" id="policy_valid_since" required>
+          <input style="width:215px;"type="date" id="policy_valid_since" required>
+      
+          <label for="policy_time_since">Hora desde: </label>
+          <input type="text" id="policy_valid_since_hour" required>
           <br> <br>
+      
           <label for="policy_valid_until">Vigencia hasta: </label>
-          <input type="date" id="policy_valid_until" required>
+          <input style="width:215px;" type="date" id="policy_valid_until" required>
+          
+          <label for="policy_time_until">Hora hasta: </label>
+          <input type="text" id="policy_valid_until_hour" required>
           <br> <br>
           <label for="policy_final_insured">Nombre del asegurado final: </label>
           <input type="text" id="policy_final_insured" required>
           <br> <br>
           <label for="policy_source">Origen: </label>
           <input type="text" id="policy_source" required>
-          <br> <br>
           <label for="policy_destiny">Destino: </label>
           <input type="text" id="policy_destiny" required>
-          <br>
-          <br>
-          <label for='policy_condition'>Condicion</label>
+          <br><br>    
+          <label for='policy_condition'>Condición</label>
             <select id='policy_condition'>
             <option>Nueva</option>
             </select>
           <br> <br>
           <label for="policy_conveyance">Transporte: </label>
           <input type="text" id="policy_conveyance" required>
-          <br><br>
+      
           <label for="policy_container_type">Tipo de container: </label>
           <input type="text" id="policy_container_type" required>
           <br><br>
-          <label for="policy_merchandise">Mercaderia a transportar: </label>
+          <label for="policy_merchandise">Mercadería a transportar: </label>
           <input type="text" id="policy_merchandise" required>
           <br><br>
           <label for="policy_insured_amount">Monto asegurado: </label>
           <input type="text" id="policy_insured_amount" required>
-          <br><br>
           <label for="policy_currency">Moneda: </label>
           <input type="text" id="policy_currency" required>
           <br><br>
           <label for="policy_reference_document">Documento de referencia: </label>
           <input type="text" id="policy_reference_document" required>
           <br><br>
-          <button class="btn btn-primary" onclick='save_policy(event)' type="submit">Enviar</button>
+          <button class="btn btn-primary" onclick='save_endorsement(event)' type="submit">Enviar</button>
             
       
+        </form>
+        <div class="mt-3" id="container-respuesta">
+          <label  role="checkbox" id="respuesta"></label>
+            </div>
+            <br>
         </form>
         <div class="mt-3" id="container-respuesta">
           <label  role="checkbox" id="respuesta"></label>
@@ -105,6 +120,7 @@
           </footer>  
           <!-- <script src="app1.js"></script> -->
           <script src="../js/app.js" ></script>
+          <script src="../js/misc.js" ></script>
       
         </body>
       </html>
