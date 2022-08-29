@@ -1,24 +1,17 @@
-body {margin: 30px;}
+body {margin: 40px;}
             
 label {
   margin-left: 30px;
   margin-right: 30px;
-  width: 200px;
+  
+  
+  ;
   
 }
 
+
 button {
   margin-left: 30px;
-}
-
-
-h1 {
-  text-align: center;
-  margin: 35px 0 20px 0 !important;
-  color: #818083;
-  font-weight: normal;
-  font-size: 40px;
-  text-transform: uppercase;
 }
 
 
@@ -47,3 +40,67 @@ li a {
   text-decoration: none;
 }
 
+label {
+
+  display: flex;
+  align-items: center;
+}
+
+span::after {
+  padding-left: 5px;
+}
+
+input:invalid + span::after {
+  content: "✖";
+}
+
+
+
+input:valid + span::after {
+  content: "✓";
+}
+
+h1 {
+  text-align: center;
+  margin: 35px 0 20px 0 !important;
+  color: #818083;
+  font-weight: normal;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+h3 {
+  text-align: left;
+  margin: 35px 0 20px 0 !important;
+  color: #818083;
+  font-weight: normal;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+h5 {
+  text-align: center;
+  margin: 35px 0 20px 0 !important;
+  color: #818083;
+  font-weight: normal;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+h6 {
+  text-align: center;
+  margin: 35px 0 20px 0 !important;
+  color: #375dce;
+  font-weight: normal;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+h4 {
+  text-align: left;
+  margin: 0px 0 5px;
+  color: #383839;
+  font-weight: normal;
+  font-size: 10px;
+
+}

@@ -39,41 +39,52 @@
         <br>
 
         </table>
-    <!-- <center>
 
-
-    </center>     -->
-    
-    <div class=“container”>
-    <div class=“row”>
-
-      <h3>Consultas</h3>
-      <form id="formulario">
-        <label for="id">ID: </label>
-        <input type="text" id="number_id" required>
-
-         <!-- <button class="btn btn-primary" onclick='save_contract(event)' type="submit">Enviar</button> -->
-          <br> <br>
-          <button class="btn btn-primary" onclick='read_data(event)' type="submit">Consultar</button>
-          <br> <br>
-      </form>
-      <div class="alert alert-info" role="alert" id="container-respuesta">
-        <label id="respuesta"></label>
-      </div>
-  </div>
-
+        <h3>Consultas</h3>
+        
+          <div class="row">
+            <div class="col-">
+              <label for="id">ID: </label>
+              
+            </div>
+            <div class="col-11">
+              <input type="text" id="number_id" required>
+            
+            </div>
+            </div>
+          </>
+        </div>
+      
+                <br> <br>
+                <button class="btn btn-primary" onclick='read_data(event)' type="submit">Consultar</button>
+                <br> <br>
+            </form>
+            <div class="alert alert-info" role="alert" id="container-respuesta">
+              <label id="respuesta"></label>
+            </div>
+        </div>
+      
       <br>
       
     
       
       <footer>
-                  <h6>Maqueta para testing blockchain</h6>
-          <a href="https://www.julasoft.com">Sitio web Julasoft</a>    
-        
-    </footer>   
-    <!-- <script src="app1.js"></script> -->
-    <script src="/js/app.js" ></script>
 
-  </body>
+        <h5>Maqueta para testing blockchain</h5>
+        <div class="container">
+          <a href="https://www.julasoft.com">
+              <h6>Sitio web JULASOFT</h6>
+          </a>
+    </div>
+    <br><br>
+    <h4>Webapp versión: v1.1.2</h4>
+    <h4>Middleware Blockchain versión: v0.0.1.12</h4>
+
+  </footer>  
+  
+  <script src="../js/app.js" ></script>
+  <script src="../js/misc.js" ></script>
+
+
+</body>
 </html>
-
