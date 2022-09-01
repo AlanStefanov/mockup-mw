@@ -160,12 +160,10 @@ try {
     contract_acceptance_date = document.getElementById('contract_acceptance_date').value;
     // Polizas
     policy_policy_number = document.getElementById('policy_policy_number').value;
-    policy_policy_type = document.getElementById('policy_policy_type').value;
     policy_valid_since = document.getElementById('policy_valid_since').value;
     policy_final_insured = document.getElementById('policy_final_insured').value;
     policy_source = document.getElementById('policy_source').value;
     policy_destiny = document.getElementById('policy_destiny').value;
-    policy_condition = document.getElementById('policy_condition').value;
     policy_conveyance = document.getElementById('policy_conveyance').value;
     policy_container_type = document.getElementById('policy_container_type').value;
     policy_merchandise = document.getElementById('policy_merchandise').value;
@@ -191,12 +189,10 @@ try {
             "policy": {
                 "policy_id": policy_policy_number,
                 "policy_number":policy_policy_number,
-                "policity_type":policy_policy_type,
                 "valid_since":policy_valid_since,
                 "final_insured":policy_final_insured, 
                 "source":policy_source,
                 "destiny":policy_destiny, 
-                "condition":policy_condition,
                 "conveyance":policy_conveyance,
                 "container_type":policy_container_type,
                 "merchandise": policy_merchandise,
@@ -258,7 +254,6 @@ const save_policy = async (event) => {
       // Polizas
       policy_contract_number = document.getElementById('policy_contract_number').value;
       policy_policy_number = document.getElementById('policy_policy_number').value;
-      policy_policy_type = document.getElementById('policy_policy_type').value;
       policy_valid_since = document.getElementById('policy_valid_since').value;
       policy_valid_since_hour = document.getElementById('policy_valid_since_hour').value;
       policy_valid_until = document.getElementById('policy_valid_until').value;
@@ -266,7 +261,6 @@ const save_policy = async (event) => {
       policy_final_insured = document.getElementById('policy_final_insured').value;
       policy_source = document.getElementById('policy_source').value;
       policy_destiny = document.getElementById('policy_destiny').value;
-      policy_condition = document.getElementById('policy_condition').value;
       policy_conveyance = document.getElementById('policy_conveyance').value;
       policy_container_type = document.getElementById('policy_container_type').value;
       policy_merchandise = document.getElementById('policy_merchandise').value;
@@ -288,7 +282,6 @@ const save_policy = async (event) => {
               "policy": {
                   "policy_id": policy_policy_number,
                   "policy_number":policy_policy_number,
-                  "policity_type":policy_policy_type,
                 "valid_since": policy_valid_since,
                 "valid_since_hour": policy_valid_since_hour, 
                 "valid_until": policy_valid_until,        
@@ -296,7 +289,6 @@ const save_policy = async (event) => {
                   "final_insured":policy_final_insured, 
                   "source":policy_source,
                   "destiny":policy_destiny, 
-                  "condition":policy_condition,
                   "conveyance":policy_conveyance,
                   "container_type":policy_container_type,
                   "merchandise": policy_merchandise,
@@ -357,7 +349,6 @@ const save_policy = async (event) => {
         // Endoso
       policy_contract_number = document.getElementById('policy_contract_number').value;
       policy_policy_number = document.getElementById('policy_policy_number').value;
-      policy_policy_type = document.getElementById('policy_policy_type').value;
       policy_valid_since = document.getElementById('policy_valid_since').value;
       policy_valid_since_hour = document.getElementById('policy_valid_since_hour').value;
       policy_valid_until = document.getElementById('policy_valid_until').value;
@@ -365,7 +356,6 @@ const save_policy = async (event) => {
       policy_final_insured = document.getElementById('policy_final_insured').value;
       policy_source = document.getElementById('policy_source').value;
       policy_destiny = document.getElementById('policy_destiny').value;
-      policy_condition = document.getElementById('policy_condition').value;
       policy_conveyance = document.getElementById('policy_conveyance').value;
       policy_container_type = document.getElementById('policy_container_type').value;
       policy_merchandise = document.getElementById('policy_merchandise').value;
@@ -387,7 +377,6 @@ const save_policy = async (event) => {
                 "policy": {
                   "policy_id": policy_policy_number,
                   "policy_number":policy_policy_number,
-                  "policity_type":policy_policy_type,
                 "valid_since": policy_valid_since,
                 "valid_since_hour": policy_valid_since_hour, 
                 "valid_until": policy_valid_until,        
@@ -395,7 +384,6 @@ const save_policy = async (event) => {
                   "final_insured":policy_final_insured, 
                   "source":policy_source,
                   "destiny":policy_destiny, 
-                  "condition":policy_condition,
                   "conveyance":policy_conveyance,
                   "container_type":policy_container_type,
                   "merchandise": policy_merchandise,
