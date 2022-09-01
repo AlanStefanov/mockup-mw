@@ -32,42 +32,117 @@
 
     <h3>Siniestros</h3> <br>
     <form id="formulario">
-        <label for="claims_claims_id">ID Siniestro: </label>
-        <input type="text" id="claims_claims_id" disabled>
-        <br> <br>
-        <label for="claims_contract_number"> Número de contrato: </label>
-        <input type="text" id="claims_contract_number" required oninput="cambioSiniestro()">
-        
-        <label for="claims_policy_number">Número de póliza: </label>
-        <input type="text" id="claims_policy_number" required oninput="cambioSiniestro()">
-        <br> <br>
-        <label for="claims_claim_number">Número de siniestro:</label>
-        <input type="text" id="claims_claim_number"required oninput="cambioSiniestro()">
-        <br><br>
-        <label for="claims_date_complaint">Fecha de reclamo: </label>
-        <input type="date" id="claims_date_complaint" required >
-        <br> <br>
-        <label for="claims_date_claim">Fecha del siniestro: </label>
-        <input type="date" id="claims_date_claim" required >
-        <br> <br>
-        <label for="claims_type_claim">Tipo de siniestro: </label>
-        <input type="text" id="claims_type_claim" required> 
-        <br> <br>
-        <label for="claims_crash_site">Lugar del siniestro: </label>
-        <input type="text" id="claims_crash_site" required>
 
-        <label for="claims_crash_site_hour">Horario del siniestro: </label>
-        <input type="text" id="claims_crash_hour" required>
-        <br> <br>
-        <label for="claims_reclaimed_amount">Monto reclamado: </label>
-        <input type="text" id="claims_reclaimed_amount" required>
+                  <div class="row">
+            <div class="col-md-1">
+              <label for="claims_claims_id">ID Siniestro: </label>
+
+            </div>
+            <div class="col-md-11">
+              <input type="text" id="claims_claims_id" disabled>
+            </div></div>
+<br><br><br>
+                      <div class="row">
+            <div class="col-md-1">
+              <label for="claims_contract_number"> Número de contrato: </label>
+
+            </div>
+            <div class="col-md-2">
+              <input type="text" id="claims_contract_number" required oninput="cambioSiniestro()">
+
+            </div>
+            <div class="col-md-1">
+              <label for="claims_policy_number">Número de póliza: </label>
+
+            </div>
+            <div class="col-md-2">
+              <input type="text" id="claims_policy_number" required oninput="cambioSiniestro()">
+            </div>
+            <div class="col-md-1">
+              <label for="claims_claim_number">Número de siniestro:</label>
+              
+            </div>
+            <div class="col-md-2">
+              <input type="text" id="claims_claim_number"required oninput="cambioSiniestro()">
+              
+            </div></div>
+<br>  
+                      <div class="row">
+                        <div class="col-md-1">
+              <label for="claims_date_complaint">Fecha de reclamo: </label>
+              
+            </div>
+            <div class="col-md-2">
+              <input type="date" id="claims_date_complaint" required >
+              
+            </div>
+            <div class="col-md-1">
+              <label for="claims_date_claim">Fecha del siniestro: </label>
+
+            </div>
+            <div class="col-md-8">
+              <input type="date" id="claims_date_claim" required >
+
+            </div></div>
+<br>
+
+            
+            <div class="row">
+              <div class="col-md-1">
+                <label for="claims_type_claim">Tipo de siniestro: </label>
+  
+              </div>
+              <div class="col-md-2">
+                <input type="text" id="claims_type_claim" required> 
+  
+              </div>
+              <div class="col-md-1">
+                <label for="claims_crash_site">Lugar del siniestro: </label>
+  
+              </div>
+              <div class="col-md-2">
+                <input type="text" id="claims_crash_site" required>
+                
+              </div>
+            <div class="col-md-1">
+              <label for="claims_crash_site_hour">Horario del siniestro: </label>
+
+            </div>
+            <div class="col-md-2">
+              <input type="time" id="claims_crash_hour" required>
+            </div></div>
+<br>
+                      <div class="row">
+            <div class="col-md-1">
+              <label for="claims_reclaimed_amount">Monto reclamado: </label>
+
+            </div>
+            <div class="col-md-2">
+              <input type="text" id="claims_reclaimed_amount" required>
+
+            </div>
+            <div class="col-md-1">
+              <label for="claims_currency">Moneda: </label>
+
+            </div>
+            <div class="col-md-8">
+              <input type="text" id="claims_currency" required>
+
+            </div></div>
+<br> 
         
-        <label for="claims_currency">Moneda: </label>
-        <input type="text" id="claims_currency" required>
-        <br> <br>
-        <label for="claims_claimed_status">Estado del reclamo: </label>
-        <input type="text" id="claims_claimed_status" required>
-        <br> <br>
+                      <div class="row">
+            <div class="col-md-1">
+              <label for="claims_claimed_status">Estado del reclamo: </label>
+
+            </div>
+            <div class="col-md-11">
+              <input type="text" id="claims_claimed_status" required>
+
+
+            </div></div>
+<br>
+        
         <button class="btn btn-primary" onclick='save_claims(event)' type="submit">Enviar</button>
         
 
