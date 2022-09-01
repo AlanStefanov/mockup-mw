@@ -349,6 +349,7 @@ const save_policy = async (event) => {
         // Endoso
       policy_contract_number = document.getElementById('policy_contract_number').value;
       policy_policy_number = document.getElementById('policy_policy_number').value;
+      policy_endorsement_number = document.getElementById('policy:endorsement_number').value;
       policy_valid_since = document.getElementById('policy_valid_since').value;
       policy_valid_since_hour = document.getElementById('policy_valid_since_hour').value;
       policy_valid_until = document.getElementById('policy_valid_until').value;
@@ -374,9 +375,10 @@ const save_policy = async (event) => {
                 "contract": {
                 "contract_number": policy_contract_number,
                   
-                "policy": {
+                "endorsement": {
                   "policy_id": policy_policy_number,
-                  "policy_number":policy_policy_number,
+                  "policy_number": policy_policy_number,
+                  "endorsement_number": policy_endorsement_number,
                 "valid_since": policy_valid_since,
                 "valid_since_hour": policy_valid_since_hour, 
                 "valid_until": policy_valid_until,        
