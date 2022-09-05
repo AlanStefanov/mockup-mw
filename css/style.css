@@ -97,15 +97,16 @@ nav > ul > li a:hover {
 }
 
 .header__title {
-  padding:5rem 1rem 1rem 1rem;
-  
+  padding: 5rem;
+
 }
 
 
 
 
 .container__form {
-  color:#383839;  
+  color:#383839;
+    
 }
 
 
@@ -120,7 +121,8 @@ button {
 input, textarea{
 
   width: 220px;
-}
+  }
+
 
 
 h1 {
@@ -154,10 +156,9 @@ h5 {
   text-align: center;
   margin: 35px 0 20px 0 !important;
   color: #375dce;
-  font-weight: normal;
   font-size: 12px;
   text-transform: uppercase;
-  text-decoration: none;
+  text-decoration:none;
 }
 
 h6 {
@@ -169,3 +170,10 @@ h6 {
 
 }
 
+.container-respuesta{
+  color:#0074c7
+}
+
+.bs-alert-border-color {
+  color:black;
+}
