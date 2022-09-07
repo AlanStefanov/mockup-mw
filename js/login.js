@@ -4,7 +4,7 @@ function login() {
     password = document.getElementById("password").value;
 
     if (user == "julasoft" && password == "testing") {
-        window.location = "index.html";
+        window.location = "/src/contratos.html";
         
     }
 }
