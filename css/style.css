@@ -8,8 +8,10 @@
 
 
 
-body {margin: 40px;}
-            
+body {margin: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}  
+     
 label {
   margin-left: 30px;
   margin-right: 30px;
