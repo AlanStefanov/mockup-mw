@@ -94,3 +94,21 @@ h5 {
     margin-left: 3rem;
     padding: 1rem;
   }
+  
+.container text-center  {
+    text-align: center;
+    
+    }
+    
+    
+    #login__respuesta {
+        padding: 1rem 2rem;
+        font-size: 0.8rem;
+        width:max-content;
+        height: max-content;
+        text-align:center;
+        
+    }
+
+
+
