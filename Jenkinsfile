@@ -5,4 +5,8 @@ node {
     stage ('Build Docker Image') {
         sh 'docker build -t mockup-mw:latest .'
     }
+    stage('Run  Docker Container'){
+        sh 'docker run -it -dp 4000:80 mockup-mw:latest'
+
+    }
 }
