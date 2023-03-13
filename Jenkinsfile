@@ -5,8 +5,11 @@ node {
     stage ('Build Docker Image') {
         sh 'docker build -t mockup-mw:latest .'
     }
+        stage ('Remove old Docker Image') {
+        sh 'docker rm mockup-mw -f'
+    }    
     stage('Run  Docker Container'){
-        sh 'docker run -it -dp 4000:80 mockup-mw:latest'
+        sh 'docker run -it -dp 4000:80 --name mockup-mw mockup-mw'
 
     }
 }
